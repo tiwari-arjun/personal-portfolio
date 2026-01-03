@@ -112,3 +112,130 @@ body {
     display: none; /* later you can add hamburger menu */
   }
 }
+
+/* Hero Sections */
+
+.hero-section {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+  background: #ffffff;
+  padding-bottom: 15vh;
+  animation: SlideUp 2s forwards;
+}
+
+@keyframes SlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1; /* fade in */
+    transform: translateY(0); /* move to original position */
+  }
+}
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.main-titles .hero-para {
+  font-size: 1.1rem;
+  color: #0000ff;
+  margin-bottom: 0.9rem;
+}
+
+.main-titles .hero-heading {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0.2rem 0;
+  color: oklch(0.145 0 0);
+}
+
+.main-titles .hero-heading-1 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #303036;
+  margin-top: 0.6rem;
+}
+
+.main-titles .hero-heading-2 {
+  font-size: 1.3rem;
+  color: #666;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem; /* Space between buttons */
+  flex-wrap: wrap; /* Stack buttons on small screens */
+  padding-top: 0.6vh;
+}
+
+.buttons button {
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 15px 40px;
+}
+
+.work-btn {
+  background-color: oklch(53.252% 0.23257 264.957);
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.work-btn:hover {
+  background-color: oklch(0.488 0.243 264.376);
+  transform: scale(1.05);
+}
+
+.cv-btn {
+  background-color: #ffffff;
+  color: black;
+  border: 2px solid rgb(230, 224, 224);
+  font-family: sans-serif;
+  transition: all 0.3s ease;
+}
+
+.cv-btn:hover {
+  border-color: blue;
+  transform: scale(1.05);
+}
+
+/* Scroll Icon Container */
+.scroll-down {
+  position: absolute; /* place over hero section */
+  bottom: 20px; /* 20px from bottom */
+  left: 50%; /* center horizontally */
+  transform: translateX(-50%); /* true horizontal center */
+  font-size: 1.5rem; /* size of the arrow */
+  color: #67676c; /* color of the arrow */
+  cursor: pointer;
+  padding-bottom: 17vh;
+  animation: bounce 2s infinite;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(5px);
+  }
+}
