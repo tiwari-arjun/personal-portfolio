@@ -1,4 +1,5 @@
 /* RESET */
+
 * {
   margin: 0;
   padding: 0;
@@ -121,7 +122,7 @@ body {
   align-items: center;
   height: 100vh;
   display: flex;
-  background: #ffffff;
+  background: #fafafa;
   padding-bottom: 15vh;
   animation: SlideUp 2s forwards;
 }
@@ -157,10 +158,11 @@ body {
 }
 
 .main-titles .hero-heading-1 {
-  font-size: 2.1rem;
-  font-weight: 700;
-  color: #303036;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #303035;
   margin-top: 0.6rem;
+  font-family: "Inter", sans-serif;
 }
 
 .main-titles .hero-heading-2 {
@@ -238,4 +240,53 @@ body {
   60% {
     transform: translateX(-50%) translateY(5px);
   }
+}
+
+.about-section {
+  height: 60vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+.about-title {
+  font-size: 2.1rem;
+  margin: 20px;
+  color: #262525;
+  padding-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem; /* space below heading */
+}
+
+.about-title::after {
+  content: "";
+  margin: 12px auto 0;
+  display: block;
+  margin-top: 12px; /* distance between text and line */
+  width: 70px; /* length of underline */
+  height: 4px; /* HIGH / thick underline */
+  background-color: oklch(53.223% 0.23277 264.813);
+  border-radius: 4px;
+}
+
+.box-description {
+  width: 900px;
+  min-height: 200px;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #fbfbfb;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 10px 10px 10px rgba(255, 86, 86, 0.05);
+}
+
+.box-description p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #334155;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: left;
 }
