@@ -295,7 +295,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  max-width: 950px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -319,8 +319,8 @@ body {
 
 .box-content h3 {
   font-size: 1rem;
-  font-family: "Poppins", sans-serif;
-  font-weight: 520;
+  font-family: "Inter", sans-serif;
+  font-weight: 550;
 }
 
 .box-content p {
@@ -331,11 +331,17 @@ body {
   width: 50px;
   height: 50px;
   margin: 0 20px;
-  border-radius: 10%;
-  background: #f1f5ff;
+  border-radius: 20%;
+  background: rgba(30, 136, 229, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.interest-boxes:hover .icons {
+  background-color: rgba(30, 136, 229, 0.32);
 }
 
 .box-content {
@@ -348,4 +354,147 @@ body {
   padding: 10px 50px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
+}
+
+/* ===== Academics Section ===== */
+.academics-section {
+  min-height: 100vh;
+  padding: 80px 20px;
+  background: #f8fbff;
+}
+
+.academics-title {
+  font-size: 1.7rem;
+  margin: 20px;
+  color: #212123;
+  padding-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem; /* space below heading */
+}
+
+.academics-title::after {
+  content: "";
+  margin: 12px auto 0;
+  display: block;
+  margin-top: 12px; /* distance between text and line */
+  width: 70px; /* length of underline */
+  height: 4px; /* HIGH / thick underline */
+  background-color: oklch(53.223% 0.23277 264.813);
+  border-radius: 4px;
+}
+
+/* Main Card */
+.box1-academics {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Degree Info */
+.box1-title {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.box1-subtitle {
+  color: red;
+}
+
+.box1-contents {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.box1-contents-3 {
+  grid-column: 1 / -1;
+}
+
+.box1-title h3 {
+  font-size: 26px;
+  color: #121313;
+  margin-bottom: 10px;
+}
+
+.box1-title p {
+  color: #475569;
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+.box1-contents > div {
+  background: rgba(33, 150, 243, 0.07);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.box1-contents > div:hover {
+  background: rgba(33, 150, 243, 0.14);
+  transform: translateY(-6px);
+}
+
+.box1-contents h3 {
+  font-size: 36px;
+  color: #2563eb;
+  margin-bottom: 6px;
+}
+
+.box1-contents p {
+  font-size: 14px;
+  color: #475569;
+}
+
+.box1-contents-2 h3 {
+  color: #c51fc5;
+}
+
+.box1-contents-3 h3 {
+  color: rgb(9, 181, 9);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .box1-academics {
+    padding: 28px;
+  }
+
+  .box1-contents {
+    grid-template-columns: 1fr;
+  }
+}
+
+.box2-academics {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 0 auto;
+  margin-top: 40px;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.box2-containers {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  gap: 20px;
+  cursor: pointer;
+}
+.box2-container {
+  background-color: rgb(251, 250, 250);
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid rgb(179, 175, 175);
+  text-align: left;
+  font-size: 15px;
 }
